@@ -1,2 +1,0 @@
-# Padrao_MVC
- 
