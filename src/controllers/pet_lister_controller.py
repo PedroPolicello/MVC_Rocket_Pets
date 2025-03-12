@@ -4,7 +4,7 @@ from src.models.sqlite.entities.pets import PetsTable
 
 class PetListerController:
     def __init__(self, pets_repository: PetsRepositoryInterface) -> None:
-        self.pets_repository = pets_repository
+        self.__pets_repository = pets_repository
 
 
     def list(self) -> Dict:
@@ -13,7 +13,7 @@ class PetListerController:
         return response
 
     def __get_pets_in_db(self) -> List[PetsTable]:
-        pets = self.pets_repository.list_pets()
+        pets = self.__pets_repository.list_pets()
         return pets
 
 
