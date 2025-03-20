@@ -1,9 +1,12 @@
+default_language_version:
+  python: python3.11.5  # Substitua pela sua versão real do Python
+
 repos:
   - repo: local
     hooks:
       - id: pylint
         name: pylint
-        entry: pylint
+        entry: python -m pylint  # Garante que o pylint rode no ambiente correto
         language: system
         types: [python]
         args:
